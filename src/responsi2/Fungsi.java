@@ -24,18 +24,40 @@ public class Fungsi {
             } while (acak == 0);
             dadu[i] = acak;
         }
-        System.out.println("ANGKA YANG DIMAKSUD ADALAH");
-        for (i = 0; i < JD; i++) {
-            System.out.print(dadu[i] + " ");
-        }
     }
 
     public void kesempatan() {
         kesempatan = 3;
         System.out.println("Mari Menebak Angka Dadu dengan " + (kesempatan) + "x Kesempatan");
-        System.out.println();
     }
 
     public void tebakdadu() {
+        for (i = 0; i < dadu.length; i++) {
+            System.out.println("");
+            System.out.println("Dadu ke-" + (i + 1));
+            do {
+                System.out.print("Masukkan Angka yang Anda Tebak : ");
+                tebak[i] = input.nextInt();
+                if (kesempatan > 0) {
+                    if (tebak[i] == dadu[i]) {
+                        System.out.println("Selamat! Angka yang anda masukkan BENAR.");
+                        break;
+                    } else if (tebak[i] < dadu[i]) {
+                        System.out.println("Angka yang anda masukkan terlalu KECIL.");
+                    } else if (tebak[i] > dadu[i]) {
+                        System.out.println("Angka yang anda masukkan terlalu BESAR.");
+                    }
+                    System.out.println("Anda Memiliki " + kesempatan + " Kesempatan Lagi");
+                    System.out.println("---------------------------------------------------");
+                    kesempatan--;
+                } else {
+                    System.out.println("---------------------------------------------------");
+                    System.out.println("ANDA SALAH!!KESEMPATAN TELAH HABIS. SILAHKAN COBA LAGI");
+                    System.out.println("ANGKA YANG DIMAKSUD ADALAH " + dadu[i]);
+                    System.out.println("---------------------------------------------------");
+                    break;
+                }
+            } while (kesempatan > 0);
+        }
     }
 }
