@@ -37,33 +37,5 @@ public class Fungsi {
     }
 
     public void tebakdadu() {
-//        for (i = 0; i < tebak.length; i++) {
-//            do {
-//                System.out.print("Masukkan Angka yang Anda Tebak : ");
-//                tebak[i] = input.nextInt();
-//                if (kesempatan >= 1) {
-//                    if (tebak[i] == dadu[i]) {
-//                        System.out.println("Selamat ! Anda BENAR");
-//                        System.out.println();
-//                        break;
-//                    } else if (tebak[i] < dadu[i]) {
-//                        System.out.println("Angka yang anda masukkan terlalu KECIL.");
-//                        System.out.println();
-//                    } else if (tebak[i] > dadu[i]) {
-//                        System.out.println("Angka yang anda masukkan terlalu BESAR.");
-//                        System.out.println();
-//                    }
-//                    kesempatan--;
-//                    System.out.println("Anda Memiliki " + kesempatan + " Kesempatan Lagi");
-//                    System.out.println("=======================================");
-//                    System.out.println();
-//                } else {
-//                    System.out.println();
-//                    System.out.println("ANDA SALAH, KESEMPATAN TELAH HABIS. SILAHKAN COBA LAGI");
-//                    break;
-//                }
-//            } while (kesempatan > 0);
-//        }
-
     }
 }
