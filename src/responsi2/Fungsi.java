@@ -28,7 +28,7 @@ public class Fungsi {
 
     public void kesempatan() {
         kesempatan = 3;
-        System.out.println("Mari Menebak Angka Dadu dengan " + (kesempatan) + "x Kesempatan");
+        System.out.println("Mari Menebak Angka Dadu dengan " + kesempatan + "x Kesempatan");
     }
 
     public void tebakdadu() {
@@ -38,7 +38,7 @@ public class Fungsi {
             do {
                 System.out.print("Masukkan Angka yang Anda Tebak : ");
                 tebak[i] = input.nextInt();
-                if (kesempatan > 0) {
+                if (kesempatan > 1) {
                     if (tebak[i] == dadu[i]) {
                         System.out.println("Selamat! Angka yang anda masukkan BENAR.");
                         break;
@@ -47,9 +47,9 @@ public class Fungsi {
                     } else if (tebak[i] > dadu[i]) {
                         System.out.println("Angka yang anda masukkan terlalu BESAR.");
                     }
+                    kesempatan--;
                     System.out.println("Anda Memiliki " + kesempatan + " Kesempatan Lagi");
                     System.out.println("---------------------------------------------------");
-                    kesempatan--;
                 } else {
                     System.out.println("---------------------------------------------------");
                     System.out.println("ANDA SALAH!!KESEMPATAN TELAH HABIS. SILAHKAN COBA LAGI");
