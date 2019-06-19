@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Fungsi {
 
     Scanner input = new Scanner(System.in);
-    int JD, total, acak, kesempatan, i, x;
+    int JD, acak, kesempatan, i, x;
     int[] dadu;
     int[] tebak;
 
@@ -38,7 +38,7 @@ public class Fungsi {
             do {
                 System.out.print("Masukkan Angka yang Anda Tebak : ");
                 tebak[i] = input.nextInt();
-                if (kesempatan > 1) {
+                if (kesempatan > 0) {
                     if (tebak[i] == dadu[i]) {
                         System.out.println("Selamat! Angka yang anda masukkan BENAR.");
                         break;
@@ -50,7 +50,8 @@ public class Fungsi {
                     kesempatan--;
                     System.out.println("Anda Memiliki " + kesempatan + " Kesempatan Lagi");
                     System.out.println("---------------------------------------------------");
-                } else {
+                }
+                if (kesempatan == 0) {
                     System.out.println("---------------------------------------------------");
                     System.out.println("ANDA SALAH!!KESEMPATAN TELAH HABIS. SILAHKAN COBA LAGI");
                     System.out.println("ANGKA YANG DIMAKSUD ADALAH " + dadu[i]);
